@@ -6,17 +6,17 @@
 #    By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/11 12:51:50 by psmolin           #+#    #+#              #
-#    Updated: 2025/12/02 11:57:01 by psmolin          ###   ########.fr        #
+#    Updated: 2025/12/02 18:16:19 by psmolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = bureaucrat
 CXX = c++
 RM = rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
 SRCS = \
 		main.cpp \
-		Bureaucrat.cpp \
+		Bureaucrat.cpp
 HEADERS = Bureaucrat.hpp
 OBJS = $(SRCS:.cpp=.o)
 

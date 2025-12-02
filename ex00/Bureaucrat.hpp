@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:50 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/02 12:12:49 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/02 18:34:55 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
+
+# define COL_R	"\033[31m"
+# define COL_Y	"\033[33m"
+# define COL_B	"\033[34m"
+# define COL_X	"\033[0m"
 
 # define GRADE_LOWEST	150
 # define GRADE_HIGHEST	1
@@ -42,11 +48,10 @@ class Bureaucrat
 
 		std::string getName() const;
 		int			getGrade() const;
+		void		incrementGrade();
+		void		decrementGrade();
 };
 
 std::ostream &operator << (std::ostream &out, const Bureaucrat &bureaucrat);
-{
-	std:cout
-}
 
 #endif
