@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:50 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/02 18:34:55 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/04 23:45:40 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ class Bureaucrat
 
 		class GradeTooHighException : public std::exception
 		{
-			const char *what() const noexcept
-				{return ("Grade is too high!");}
+			public:
+				const char *what() const noexcept;
 		};
 		class GradeTooLowException : public std::exception
 		{
-			const char *what() const noexcept
-				{return ("Grade is too low!");}
+			public:
+				const char *what() const noexcept;
 		};
 
 		std::string getName() const;

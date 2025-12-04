@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:45 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/02 18:29:50 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/04 01:28:30 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 	else if (grade > GRADE_LOWEST)
 		throw Bureaucrat::GradeTooLowException();
 	this->_grade = grade;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const noexcept
+{
+	return ("Grade is too high!");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const noexcept
+{
+	return ("Grade is too low!");
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other): _name(other._name), _grade(other._grade){};
@@ -54,6 +64,7 @@ void	Bureaucrat::decrementGrade()
 }
 std::ostream &operator << (std::ostream &out, const Bureaucrat &bureaucrat)
 {
-	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".";
+	out << COL_Y << bureaucrat.getName() << COL_X << ", bureaucrat grade " \
+	<< COL_Y << bureaucrat.getGrade() << COL_X << ".";
 	return out;
 }

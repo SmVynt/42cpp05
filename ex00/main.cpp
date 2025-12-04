@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:51:32 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/02 18:33:56 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/04 01:41:07 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	main()
 		std::cout << alice << std::endl;
 
 		alice.incrementGrade();
-		std::cout << "After increment: " << alice << std::endl;
+		std::cout << "++: " << alice << std::endl;
 
 		alice.decrementGrade();
-		std::cout << "After decrement: " << alice << std::endl;
+		std::cout << "--: " << alice << std::endl;
 	}
 	catch (const std::exception& e)
 	{
@@ -34,6 +34,8 @@ int	main()
 	{
 		Bureaucrat	bob("Bob", 151);
 		std::cout << bob << std::endl;
+		Bureaucrat	sam("Sam", 152);
+		std::cout << sam << std::endl;
 	}
 	catch (const std::exception& e)
 	{
