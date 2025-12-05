@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:50 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/05 15:30:45 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/05 15:32:42 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # define GRADE_LOWEST	150
 # define GRADE_HIGHEST	1
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -53,7 +53,8 @@ class Bureaucrat
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
-		void		signForm(Form &form) const;
+		void		signForm(AForm &form) const;
+		void		executeForm(AForm const &form) const;
 };
 
 std::ostream &operator << (std::ostream &out, const Bureaucrat &bureaucrat);
