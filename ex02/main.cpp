@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:51:32 by psmolin           #+#    #+#             */
-/*   Updated: 2025/12/05 18:47:31 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:37:37 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@
 
 int	main()
 {
+	srand(time(NULL));
+
 	try
 	{
 		Bureaucrat alice("Alice", 40);
-		ShrubberyCreationForm form1("Shrubbery.txt");
+		ShrubberyCreationForm form1("Form");
 		std::cout << alice << std::endl;
 		std::cout << form1 << std::endl;
 		alice.executeForm(form1);

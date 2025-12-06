@@ -17,14 +17,12 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) :
 	AForm("Presidential Pardon", PRESIDENTIALPARDON_GRADE_TO_SIGN, PRESIDENTIALPARDON_GRADE_TO_EXECUTE),
 	_target(target)
 {
-	srand(time(NULL));
 };
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other) :
 	AForm(other),
 	_target(other._target)
 {
-	srand(time(NULL));
 };
 
 PresidentialPardonForm &PresidentialPardonForm::operator = (const PresidentialPardonForm &other)

@@ -36,12 +36,12 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){};
 void	ShrubberyCreationForm::executeAction() const
 {
 	std::ofstream	outFile;
-	// std::string		fileName = this->_target;
+	std::string		fileName = this->_target + "_shrubbery";
 
-	outFile.open(this->_target);
+	outFile.open(fileName);
 	if (!outFile)
 	{
-		std::cerr << COL_R << "Error: Could not create file " << this->_target << COL_X << std::endl;
+		std::cerr << COL_R << "Error: Could not create file " << fileName << COL_X << std::endl;
 		return ;
 	};
 	outFile << "       _-_   \n";

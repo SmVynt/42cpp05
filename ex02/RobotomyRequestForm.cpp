@@ -17,14 +17,12 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target) :
 	AForm("Robotomy", ROBOTOMY_GRADE_TO_SIGN, ROBOTOMY_GRADE_TO_EXECUTE),
 	_target(target)
 {
-	srand(time(NULL));
 };
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) :
 	AForm(other),
 	_target(other._target)
 {
-	srand(time(NULL));
 };
 
 RobotomyRequestForm &RobotomyRequestForm::operator = (const RobotomyRequestForm &other)
